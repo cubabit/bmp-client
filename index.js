@@ -76,7 +76,7 @@ class BrowserMobClient {
     return request({
        method:method,
        json:true,
-       body:data || {},
+       form:data || {},
        uri: `${ this.browserMob.uri }/${ url }`
     });
   }
