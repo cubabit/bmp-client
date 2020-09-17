@@ -47,9 +47,15 @@ class BrowserMobClient {
     .then( () => that.limits = _.extend({}, that.limits, options ) );
   }
 
-  start(options){
+  start(options, upstreamProxy){
     let that = this;
-    return that.callRest('proxy', 'POST', options )
+    let path = 'proxy';
+
+    if (upstreamProxy) {
+      path += "?httpProxy=" + encodeURIComponent(upstreamProxy);
+    }
+
+    return that.callRest(path, 'POST', options )
     .then( proxyInfo => {
       that.proxy = proxyInfo;
       return proxyInfo;

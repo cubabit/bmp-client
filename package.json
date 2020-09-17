@@ -27,7 +27,7 @@
     "request-promise-native": "^1.0.3"
   },
   "devDependencies": {
-    "ip":"1.1.5",
+    "ip": "1.1.5",
     "chai": "4.2.0",
     "mocha": "6.1.4",
     "phantomjs-prebuilt": "2.1.16",
@@ -41,6 +41,6 @@
   "jshintConfig": {
     "esversion": 6,
     "node": true,
-    "mocha":true
+    "mocha": true
   }
 }
